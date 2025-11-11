@@ -1,18 +1,4 @@
-import {formData} from './data.js';
-
 const formDataContainer = document.querySelector('.form-container')
-
-formDataContainer.innerHTML = `
-    ${formData.map(item => `
-      <div class="form-cell">
-        <h2 class="form-cell-title" data-field="${item.title.toLowerCase().replace(' ', '')}">${item.title}</h2>
-        <input class="form-input" type="${item.type}" placeholder="${item.placeholder}" name="${item.title.toLowerCase().replace(' ', '')}">
-        <span class="error-message">${item.error}</span>
-      </div>
-    `).join('')}
-    <button type="submit" class="register-button">Register</button>
-`;
-
 const validationRules = {
   name: (value) => /^[A-Za-z\s'-]{4,}$/.test(value),
   surname: (value) => /^[A-Za-z\s'-]{4,}$/.test(value),

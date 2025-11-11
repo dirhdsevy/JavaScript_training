@@ -5,18 +5,58 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>First Task</title>
-    <link rel="stylesheet" href="./design.css">
+    <link rel="stylesheet" href="design.css">
   </head>
 
   <body>
     <div class="block-form">
       <h1 class="form-title">User Register Form</h1>
-      <form id="registrationForm" class="form-container"></form>
+      <form id="registrationForm" class="form-container">
+
+        <div class="form-cell">
+          <h2 class="form-cell-title" data-field="name">Name</h2>
+          <input class="form-input" type="text" placeholder="Enter your name" name="name">
+          <span class="error-message">Please enter a valid name</span>
+        </div>
+
+        <div class="form-cell">
+          <h2 class="form-cell-title" data-field="surname">Surname</h2>
+          <input class="form-input" type="text" placeholder="Enter your surname" name="surname">
+          <span class="error-message">Please enter a valid surname</span>
+        </div>
+
+        <div class="form-cell">
+          <h2 class="form-cell-title" data-field="phone">Phone</h2>
+          <input class="form-input" type="tel" placeholder="Enter your phone number" name="phone">
+          <span class="error-message">Please enter a valid phone number</span>
+        </div>
+
+        <div class="form-cell">
+          <h2 class="form-cell-title" data-field="email">Email</h2>
+          <input class="form-input" type="email" placeholder="Enter your email" name="email">
+          <span class="error-message">Please enter a valid email</span>
+        </div>
+
+        <div class="form-cell">
+          <h2 class="form-cell-title" data-field="password">Password</h2>
+          <input class="form-input" type="password" placeholder="Enter your password" name="password">
+          <span class="error-message">Please enter a valid password</span>
+        </div>
+
+        <div class="form-cell">
+          <h2 class="form-cell-title" data-field="repeatpassword">Repeat Password</h2>
+          <input class="form-input" type="password" placeholder="Repeat your password" name="repeatpassword">
+          <span class="error-message">Your passwords don't match</span>
+        </div>
+
+        <button type="submit" class="register-button">Register</button>
+
+      </form>
     </div>
 
     <div id="successMessage" class="success-message">Registration Successful!</div>
 
-    <script type="module" src="scripts/scripts.js"></script>
+    <script src="scripts.js"></script>
   </body>
 
 </html>
